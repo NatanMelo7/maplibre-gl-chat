@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7f4" />
+    <meta name="description" content="An interactive map starter built with MapLibre GL JS." />
+    <title>Map Explorer | MapLibre</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Map Explorer home">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span class="brand-copy">
+            <strong>Map Explorer</strong>
+            <span>A space to explore geographic data</span>
+          </span>
+        </a>
+        <div class="map-status"><span class="status-dot"></span><span id="map-status">Loading map…</span></div>
+      </header>
+
+      <section class="map-frame" aria-label="Interactive map">
+        <div id="map"></div>
+        <aside class="map-card">
+          <span class="eyebrow">MAPLIBRE GL JS</span>
+          <h1>Your map starts here.</h1>
+          <p>Explore the map, add layers, and experiment with LLM function calling.</p>
+          <button id="home-button" type="button">
+            <span aria-hidden="true">⌖</span> Back to São Paulo
+          </button>
+        </aside>
+        <div class="map-hint">Drag to pan <span>·</span> Scroll to zoom</div>
+      </section>
+      <footer class="footer"><span>Learning project</span><span>Open maps, new possibilities</span></footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
