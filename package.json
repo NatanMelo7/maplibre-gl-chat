@@ -1,0 +1,31 @@
+{
+  "name": "maplibre-chat-tools",
+  "description": "A provider-agnostic chat control with function calling for MapLibre GL JS",
+  "license": "MIT",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./lib-dist/maplibre-chat-tools.js",
+  "module": "./lib-dist/maplibre-chat-tools.js",
+  "types": "./lib-dist/maplibre-chat-tools.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib-dist/maplibre-chat-tools.d.ts",
+      "import": "./lib-dist/maplibre-chat-tools.js"
+    },
+    "./style.css": "./lib-dist/maplibre-chat-tools.css"
+  },
+  "files": ["lib-dist", "README.md", "LICENSE"],
+  "sideEffects": ["**/*.css"],
+  "peerDependencies": {
+    "maplibre-gl": ">=4.0.0"
+  },
+  "scripts": {
+    "build": "vite build --config vite.lib.config.js --configLoader runner",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "maplibre-gl": "^6.14.0",
+    "vite": "^7.1.0"
+  }
+}
